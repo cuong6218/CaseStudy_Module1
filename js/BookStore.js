@@ -15,7 +15,7 @@ class BookStore {
         this.books.push(book);
     }
     getHtml() {
-        let table = `<table><tr>
+        let table = `<table id="list-books"><tr>
                         <th>Tên sách</th>
                         <th>Thể loại</th>
                         <th>Tác giả</th>

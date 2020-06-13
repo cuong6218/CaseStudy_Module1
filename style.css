@@ -7,13 +7,30 @@ form{
 input {
     margin-bottom: 10px;
 }
-th, td{
-    border: 1px solid black;
-    width: 300px;
-    height: 50px;
+img{
+  width: 50px;
+  height: 50px;
+}
+
+#list-books {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #list-books td, #list-books th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #list-books tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #list-books tr:hover {background-color: #ddd;}
+  
+  #list-books th {
     text-align: center;
-}
-table{
-    border: 1px solid black;
-    width: 1000px;
-}
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ff9966;
+    color: white;
+  }

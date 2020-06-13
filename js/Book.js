@@ -66,7 +66,7 @@ class Book{
                         <td>${this._publish}</td>
                         <td>${this._price}</td>
                         <td>${this._desc}</td>
-                        <td>${this._img}</td>
+                        <td><img src="${this._img}" class="center"></td>
                     </tr>`;
             return table;
     }
