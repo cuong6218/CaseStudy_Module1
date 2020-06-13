@@ -30,14 +30,15 @@ class BookStore {
         table += '</table>';
         return table;
     }
-    getButtons(index){
-        let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>`;
+    getButtons(index) {
+        let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>
+                        <td><button type="button" onclick="editBook(${index})">Edit</button</td>`;
         return buttons;
     }
-    getBookbyIndex(index){
+    getBookbyIndex(index) {
         return this.books[index];
     }
-    del(index){
+    del(index) {
         this.books.splice(index, 1);
     }
 }
