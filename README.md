@@ -7,3 +7,5 @@
 6. Tạo giao diện chức năng sửa thông tin sách
 7. Xử lý logic chức năng sửa thông tin sách
 8. Kết nối Local Storage
+9. Tạo giao diện lọc thông tin sách
+10. Xử lý logic chức năng lọc thông tin sách

@@ -1,13 +1,13 @@
-let store1 = new BookStore ('Rodneys Store');
+let store1 = new BookStore('Rodneys Store');
 store1.init();
 display(store1.getHtml());
 let currentBook = 0;
-function display(table){
+function display(table) {
     document.getElementById('list-book').innerHTML = table;
     saveData();
 }
 
-function addBook(){
+function addBook() {
     let name = document.getElementById('add-name').value;
     let kind = document.getElementById('add-kind').value;
     let author = document.getElementById('add-author').value;
@@ -21,13 +21,13 @@ function addBook(){
     display(store1.getHtml());
     document.getElementById('add-form').reset();
 }
-function delBook(index){
+function delBook(index) {
     store1.del(index);
     display(store1.getHtml());
 }
 
 // Gán giá trị dữ liệu của thông tin sách cần sửa vào form sửa thông tin sách
-function editBook(index){
+function editBook(index) {
     document.getElementById('edit-form').style.display = 'inline-block';
     let book1 = store1.getBookbyIndex(index);
     document.getElementById('edit-name').value = book1.name;
@@ -40,7 +40,7 @@ function editBook(index){
     currentBook = index;
 }
 
-function saveBook(){
+function saveBook() {
     let name = document.getElementById('edit-name').value;
     let kind = document.getElementById('edit-kind').value;
     let author = document.getElementById('edit-author').value;
