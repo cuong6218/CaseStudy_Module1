@@ -14,8 +14,12 @@ class BookStore {
     addBook(book) {
         this.books.push(book);
     }
+    getButtons(index){
+        let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>`;
+        return buttons;
+    }
     getHtml() {
-        let table = `<table id="list-books"><tr>
+        let table = `<table id="list-books" cellspacing='0'><tr>
                         <th>Tên sách</th>
                         <th>Thể loại</th>
                         <th>Tác giả</th>
@@ -25,7 +29,7 @@ class BookStore {
                         <th>Hình ảnh</th>
                     </tr>`;
         for (let i = 0; i < this.books.length; i++) {
-            table += `<tr><td>${this.books[i].getHtml()}</td></tr>`;
+            table += `<tr>${this.books[i].getHtml()}${this.getButtons(i)}</tr>`;
         }
         table += '</table>';
         return table;

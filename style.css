@@ -15,12 +15,12 @@ img{
 #list-books {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 60%;
   }
   
   #list-books td, #list-books th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 6px;
   }
   
   #list-books tr:nth-child(even){background-color: #f2f2f2;}
@@ -33,4 +33,7 @@ img{
     padding-bottom: 12px;
     background-color: #ff9966;
     color: white;
+  }
+  button{
+    display: inline-block;
   }
