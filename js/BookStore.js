@@ -14,10 +14,6 @@ class BookStore {
     addBook(book) {
         this.books.push(book);
     }
-    getButtons(index){
-        let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>`;
-        return buttons;
-    }
     getHtml() {
         let table = `<table id="list-books" cellspacing='0'><tr>
                         <th>Tên sách</th>
@@ -33,5 +29,15 @@ class BookStore {
         }
         table += '</table>';
         return table;
+    }
+    getButtons(index){
+        let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>`;
+        return buttons;
+    }
+    getBookbyIndex(index){
+        return this.books[index];
+    }
+    del(index){
+        this.books.splice(index, 1);
     }
 }
