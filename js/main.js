@@ -13,7 +13,7 @@ function addBook(){
     let price = document.getElementById('add-price').value;
     let desc = document.getElementById('add-desc').value;
     let img = document.getElementById('add-img').value;
-    let book = new book(name, kind, author, publish, price, desc);
+    let book = new Book(name, kind, author, publish, price, desc);
     book.img = img;
     store1.addBook(book);
     display(store1.getHtml());
