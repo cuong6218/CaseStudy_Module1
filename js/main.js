@@ -4,6 +4,7 @@ display(store1.getHtml());
 let currentBook = 0;
 function display(table){
     document.getElementById('list-book').innerHTML = table;
+    saveData();
 }
 
 function addBook(){
