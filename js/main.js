@@ -1,7 +1,7 @@
 let store1 = new BookStore ('Rodneys Store');
 store1.init();
 display(store1.getHtml());
-let currentStore = 0;
+let currentBook = 0;
 function display(table){
     document.getElementById('list-book').innerHTML = table;
 }
@@ -28,7 +28,7 @@ function delBook(index){
 // Gán giá trị dữ liệu của thông tin sách cần sửa vào form sửa thông tin sách
 function editBook(index){
     document.getElementById('edit-form').style.display = 'inline-block';
-    let book1 = new store1.getBookbyIndex(index);
+    let book1 = store1.getBookbyIndex(index);
     document.getElementById('edit-name').value = book1.name;
     document.getElementById('edit-kind').value = book1.kind;
     document.getElementById('edit-author').value = book1.author;
@@ -36,5 +36,20 @@ function editBook(index){
     document.getElementById('edit-price').value = book1.price;
     document.getElementById('edit-desc').value = book1.desc;
     document.getElementById('edit-img').value = book1.img;
-    currentStore = index;
+    currentBook = index;
+}
+
+function saveBook(){
+    let name = document.getElementById('edit-name').value;
+    let kind = document.getElementById('edit-kind').value;
+    let author = document.getElementById('edit-author').value;
+    let publish = document.getElementById('edit-publish').value;
+    let price = document.getElementById('edit-price').value;
+    let desc = document.getElementById('edit-desc').value;
+    let img = document.getElementById('edit-img').value;
+    store1.books[currentBook].edit(name, kind, author, publish, price, desc);
+    store1.books[currentBook].img = img;
+    display(store1.getHtml());
+    document.getElementById('edit-form').reset();
+    document.getElementById('edit-form').style.display = "none";
 }

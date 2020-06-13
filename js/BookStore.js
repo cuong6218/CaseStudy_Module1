@@ -41,5 +41,7 @@ class BookStore {
     del(index) {
         this.books.splice(index, 1);
     }
-    
+    editBooks(book, name, kind, author, publish, price, desc, img){
+        book.edit(name, kind, author, publish, price, desc, img);
+    }
 }

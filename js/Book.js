@@ -57,6 +57,7 @@ class Book{
         this.publish = publish;
         this.price = price;
         this.desc = desc;
+        this._img = img;
     }
     getHtml(){
         let table = `<tr>
