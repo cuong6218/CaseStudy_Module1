@@ -23,3 +23,7 @@ function delBook(index){
     store1.del(index);
     display(store1.getHtml());
 }
+
+function editBook(index){
+    document.getElementById('edit-form').style.display = 'inline-block';
+}

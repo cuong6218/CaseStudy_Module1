@@ -3,7 +3,9 @@ form{
     margin-left: 20px;
     display: inline-block;
 }
-
+#edit-form{
+  display: none;
+}
 input {
     margin-bottom: 10px;
 }

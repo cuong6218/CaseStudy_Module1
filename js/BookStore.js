@@ -41,4 +41,5 @@ class BookStore {
     del(index) {
         this.books.splice(index, 1);
     }
+    
 }
