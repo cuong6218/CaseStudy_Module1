@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="style.css"/>
+<script src="js/Book.js"></script>
+<script src="js/BookStore.js"></script>
 <body>
     <form id="add-form">
         <fieldset><legend>Thêm thông tin sách</legend>
@@ -16,10 +18,11 @@
         <input id="add-price" placeholder="Nhập giá tiền">
         <input id="add-desc" placeholder="Nhập mô tả">
         <input id="add-img" placeholder="Kèm đường dẫn hình ảnh">
-        <button onclick="addBook()">Thêm</button>
+        <button type="button" onclick="addBook()">Thêm</button>
         </fieldset>
     </form>
     <h1>Danh sách thông tin sách</h1>
     <div id="list-book"></div>
 </body>
+<script src="js/main.js"></script>
 </html>

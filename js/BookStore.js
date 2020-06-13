@@ -15,9 +15,19 @@ class BookStore {
         this.books.push(book);
     }
     getHtml() {
-        let table = `<tr>
-                        <td>${this.books.getHtml()}</td>
-                    </tr>`
+        let table = `<table><tr>
+                        <th>Tên sách</th>
+                        <th>Thể loại</th>
+                        <th>Tác giả</th>
+                        <th>Nhà xuất bản</th>
+                        <th>Giá tiền</th>
+                        <th>Mô tả</th>
+                        <th>Hình ảnh</th>
+                    </tr>`;
+        for (let i = 0; i < this.books.length; i++) {
+            table += `<tr><td>${this.books[i].getHtml()}</td></tr>`;
+        }
+        table += '</table>';
         return table;
     }
 }
