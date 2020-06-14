@@ -71,4 +71,7 @@ class Book{
                     </tr>`;
             return table;
     }
+    checkKind(){
+        return this._kind;
+    }
 }

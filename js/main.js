@@ -1,6 +1,10 @@
+// const BOOK = 'book';
 let store1 = new BookStore('Rodneys Store');
+store1.data = loadData();   
 store1.init();
+console.log(store1.data);
 display(store1.getHtml());
+console.log(store1.books);
 let currentBook = 0;
 function display(table) {
     document.getElementById('list-book').innerHTML = table;
@@ -53,4 +57,11 @@ function saveBook() {
     display(store1.getHtml());
     document.getElementById('edit-form').reset();
     document.getElementById('edit-form').style.display = "none";
+}
+function saveData() {
+    localStorage.setItem(BOOK, JSON.stringify(store1.books));
+}
+
+function loadData() {
+    return localStorage.hasOwnProperty(BOOK)? JSON.parse(localStorage.getItem(BOOK)):[];
 }
