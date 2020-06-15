@@ -1,5 +1,5 @@
-class Book{
-    constructor(name, kind, author, publish, price, desc){
+class Book {
+    constructor(name, kind, author, publish, price, desc) {
         this._name = name;
         this._kind = kind;
         this._author = author;
@@ -8,49 +8,49 @@ class Book{
         this._desc = desc;
         this._img = "";
     }
-    get name(){
+    get name() {
         return this._name;
     }
-    set name(value){
+    set name(value) {
         this._name = value;
     }
-    get kind(){
+    get kind() {
         return this._kind;
     }
-    set kind(value){
+    set kind(value) {
         this._kind = value;
     }
-    get author(){
+    get author() {
         return this._author;
     }
-    set author(value){
+    set author(value) {
         this._author = value;
     }
-    get publish(){
+    get publish() {
         return this._publish;
     }
-    set publish(value){
+    set publish(value) {
         this._publish = value;
     }
-    get price(){
+    get price() {
         return this._price;
     }
-    set price(value){
+    set price(value) {
         this._price = value;
     }
-    get desc(){
+    get desc() {
         return this._desc;
     }
-    set desc(value){
+    set desc(value) {
         this._desc = value;
     }
-    get img(){
+    get img() {
         return this._img;
     }
-    set img(value){
+    set img(value) {
         this._img = value;
     }
-    edit(name, kind, author, publish, price, desc, img){
+    edit(name, kind, author, publish, price, desc, img) {
         this.name = name;
         this.kind = kind;
         this.author = author;
@@ -59,7 +59,7 @@ class Book{
         this.desc = desc;
         this._img = img;
     }
-    getHtml(){
+    getHtml() {
         let table = `<tr>
                         <td>${this._name}</td>
                         <td>${this._kind}</td>
@@ -69,6 +69,12 @@ class Book{
                         <td>${this._desc}</td>
                         <td><img src="${this._img}"></td>
                     </tr>`;
-            return table;
+        return table;
+    }
+    displayEach() {
+        let block = `<img src="${this._img}">
+                    <p1>${this._name}</p1>
+                    <p2>${this._price}</p2>`;
+        return block;
     }
 }

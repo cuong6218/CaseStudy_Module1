@@ -33,6 +33,7 @@ class BookStore {
     getButtons(index) {
         let buttons = `<td><button type="button" onclick="delBook(${index})">Delete</button</td>
                         <td><button type="button" onclick="editBook(${index})">Edit</button</td>`;
+        // td><button type="button" onclick="showInfo(${index})">Show Info</button></td>`;
         return buttons;
     }
     getBookbyIndex(index) {
@@ -41,8 +42,15 @@ class BookStore {
     del(index) {
         this.books.splice(index, 1);
     }
-    editBooks(book, name, kind, author, publish, price, desc, img){
+    editBooks(book, name, kind, author, publish, price, desc, img) {
         book.edit(name, kind, author, publish, price, desc, img);
     }
-       
+
+    getHtmlFrontEnd() {
+        let blocks = "";
+        for (let i = 0; i < this.books.length; i++) {
+            blocks += `${this.books[i].displayEach()}`;
+        }
+        return blocks;
+    }
 }

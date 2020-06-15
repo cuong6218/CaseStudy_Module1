@@ -11,7 +11,6 @@ function display(table) {
     document.getElementById('list-book').innerHTML = table;
     saveData();
 }
-
 function addBook() {
     let name = document.getElementById('add-name').value;
     let kind = document.getElementById('add-kind').value;
@@ -61,12 +60,12 @@ function saveBook() {
         alert('Mời bạn nhập đầy đủ thông tin');
     } else {
     store1.books[currentBook].edit(name.value, kind.value, author.value, publish.value, price.value, desc.value, img.value);
-    // store1.books[currentBook].img = img1;
     display(store1.getHtml());
     }
     document.getElementById('edit-form').reset();
     document.getElementById('edit-form').style.display = "none";
 }
+
 function saveData() {
     localStorage.setItem(BOOK, JSON.stringify(store1.books));
 }
@@ -74,7 +73,3 @@ function saveData() {
 function loadData() {
     return localStorage.hasOwnProperty(BOOK) ? JSON.parse(localStorage.getItem(BOOK)) : [];
 }
-// function search(){
-//     let keyword = document.getElementById('search').value;
-//     if (this.books.includes())
-// }

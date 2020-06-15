@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Interface</title>
 </head>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="style.css" />
 <script src="js/Book.js"></script>
 <script src="js/BookStore.js"></script>
 <script src="js/data.js"></script>
+
 <body>
-    <input type="text" id="search">
-    <button type="button" onclick="search()">Tìm kiếm</button>
     <h1>Danh sách thông tin sách</h1>
-    <div id="list-book" class="block"></div>
+    <div id="list-book1"></div>
+    <script>
+        let store1 = new BookStore('Rodneys');
+        store1.data = loadData();
+        store1.init();
+        function displayHtml(value) {
+            document.getElementById('list-book1').innerHTML = value;
+        }
+        displayHtml(store1.getHtmlFrontEnd());
+        console.log(store1.data);
+        console.log(store1.books);
+    </script>
 </body>
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
 </html>
