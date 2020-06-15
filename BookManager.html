@@ -10,19 +10,20 @@
 <script src="js/BookStore.js"></script>
 <script src="js/data.js"></script>
 <body>
+    
     <form id="add-form">
-        <fieldset><legend>Thêm thông tin sách</legend>
-        <input id="add-name" placeholder="Nhập tên sách"/>
-        <input id="add-kind" placeholder="Nhập thể loại sách"/>
-        <input id="add-author" placeholder="Nhập tên tác giả"/>
-        <input id="add-publish" placeholder="Nhập tên nhà xuất bản"/>
-        <input id="add-price" placeholder="Nhập giá tiền"/>
-        <input id="add-desc" placeholder="Nhập mô tả"/>
-        <input id="add-img" placeholder="Kèm đường dẫn hình ảnh"/>
-        <button type="button" onclick="addBook()">Thêm thông tin</button>
+        <fieldset>
+            <legend>Thêm thông tin sách</legend>
+            <input id="add-name" placeholder="Nhập tên sách" />
+            <input id="add-kind" placeholder="Nhập thể loại sách" />
+            <input id="add-author" placeholder="Nhập tên tác giả" />
+            <input id="add-publish" placeholder="Nhập tên nhà xuất bản" />
+            <input id="add-price" placeholder="Nhập giá tiền" />
+            <input id="add-desc" placeholder="Nhập mô tả" />
+            <input id="add-img" placeholder="Kèm đường dẫn hình ảnh" />
+            <button type="button" onclick="addBook()">Thêm thông tin</button>
         </fieldset>
     </form>
-
     <form id="edit-form">
         <fieldset><legend>Sửa thông tin sách</legend>
         <input id="edit-name" placeholder="Nhập tên sách"/>
@@ -35,7 +36,6 @@
         <button type="button" onclick="saveBook()">Lưu thông tin</button>
         </fieldset>
     </form>
-
     <div id="list-kind">
         <p1>Lọc thông tin sách: </p1>
         <select id="drop-down">
