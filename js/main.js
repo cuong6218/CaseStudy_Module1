@@ -1,4 +1,4 @@
-// const BOOK = 'book';
+const BOOK = 'book';
 let store1 = new BookStore('Rodneys Store');
 store1.data = loadData();
 store1.init();
@@ -29,7 +29,6 @@ function addBook() {
         display(store1.getHtml());
         document.getElementById('add-form').reset();
     }
-
 }
 function delBook(index) {
     store1.del(index);
@@ -37,43 +36,43 @@ function delBook(index) {
 }
 
 // Gán giá trị dữ liệu của thông tin sách cần sửa vào form sửa thông tin sách
-let name1 = document.getElementById('edit-name');
-let kind1 = document.getElementById('edit-kind');
-let author1 = document.getElementById('edit-author');
-let publish1 = document.getElementById('edit-publish');
-let price1 = document.getElementById('edit-price');
-let desc1 = document.getElementById('edit-desc');
-let img1 = document.getElementById('edit-img');
+let name = document.getElementById('edit-name');
+let kind = document.getElementById('edit-kind');
+let author = document.getElementById('edit-author');
+let publish = document.getElementById('edit-publish');
+let price = document.getElementById('edit-price');
+let desc = document.getElementById('edit-desc');
+let img = document.getElementById('edit-img');
 function editBook(index) {
     document.getElementById('edit-form').style.display = 'inline-block';
     let book1 = store1.getBookbyIndex(index);
-    name1.value = book1.name;
-    kind1.value = book1.kind;
-    author1.value = book1.author;
-    publish1.value = book1.publish;
-    price1.value = book1.price;
-    desc1.value = book1.desc;
-    img1.value = book1.img;
+    name.value = book1.name;
+    kind.value = book1.kind;
+    author.value = book1.author;
+    publish.value = book1.publish;
+    price.value = book1.price;
+    desc.value = book1.desc;
+    img.value = book1.img;
     currentBook = index;
 }
 
 function saveBook() {
-    if (name1 == "" || kind1 == "" || author1 == "" || publish1 == "" || price1 == "" || desc1 == "" || img1 == "") {
+    if (name.value == "" || kind.value == "" || author.value == "" || publish.value == "" || price.value == "" || desc.value == "" || img.value == "") {
         alert('Mời bạn nhập đầy đủ thông tin');
     } else {
-        store1.books[currentBook].edit(name1, kind1, author1, publish1, price1, desc1, img1);
-        // store1.books[currentBook].img = ;
-        display(store1.getHtml());
-        document.getElementById('edit-form').reset();
-        document.getElementById('edit-form').style.display = "none";
+    store1.books[currentBook].edit(name.value, kind.value, author.value, publish.value, price.value, desc.value, img.value);
+    // store1.books[currentBook].img = img1;
+    display(store1.getHtml());
     }
-    function saveData() {
-        localStorage.setItem(BOOK, JSON.stringify(store1.books));
-    }
+    document.getElementById('edit-form').reset();
+    document.getElementById('edit-form').style.display = "none";
+}
+function saveData() {
+    localStorage.setItem(BOOK, JSON.stringify(store1.books));
+}
 
-    function loadData() {
-        return localStorage.hasOwnProperty(BOOK) ? JSON.parse(localStorage.getItem(BOOK)) : [];
-    }
+function loadData() {
+    return localStorage.hasOwnProperty(BOOK) ? JSON.parse(localStorage.getItem(BOOK)) : [];
 }
 // function search(){
 //     let keyword = document.getElementById('search').value;
