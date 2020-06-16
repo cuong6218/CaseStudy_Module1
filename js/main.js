@@ -29,6 +29,7 @@ function addBook() {
         document.getElementById('add-form').reset();
     }
 }
+
 function delBook(index) {
     store1.del(index);
     display(store1.getHtml());

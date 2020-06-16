@@ -19,8 +19,9 @@
      
     
     <script>
+        let dataArr = [];
         let store1 = new BookStore("Rodneys");
-        store1.data = loadData();
+        store1.dataArr = loadData();
         
         store1.init();
         display(store1.getInterface());
@@ -28,6 +29,7 @@
         function display(table) {
             document.getElementById('list-book1').innerHTML = table;
         }
+        console.log(store1.dataArr);
     </script>
 </body>
 <!-- <script src="js/main.js"></script> -->
