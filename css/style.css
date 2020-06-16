@@ -4,11 +4,41 @@ form{
   display: inline-block;
 }
 #edit-form{
+  width: 600px;
+  height: 200px;
+  top: 200px;
+  background-color: aquamarine;
   display: none;
+  position: absolute;
+  bottom: 0;
+  right: 400px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
   /* display: inline-block; */
 }
 input {
     margin-bottom: 10px;
+    border: 3px solid olivedrab;
+    box-sizing: border-box;
+}
+.add-button{
+  background-color: #8FBC8F;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.save-button{
+  background-color: greenyellow;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  cursor: pointer;
+  font-family: ProximaNova-Regular, helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgb(18, 20, 22);
+    -webkit-font-smoothing: antialiased;
+    border-radius: 12px;
 }
 img{
   width: 50px;

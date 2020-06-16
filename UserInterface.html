@@ -15,22 +15,23 @@
     <div class="container">
         <h3>Danh sách thông tin sách</h3>
         <div id="list-book1" class="row"></div>
-    </div>    
-     
-    
+    </div>
+
+
     <script>
-        let dataArr = [];
-        let store1 = new BookStore("Rodneys");
-        store1.dataArr = loadData();
-        
+        let store1 = new BookStore("Rodneys Store");
+        store1.data = loadData();
+
         store1.init();
-        display(store1.getInterface());
-    
-        function display(table) {
-            document.getElementById('list-book1').innerHTML = table;
+        display1(store1.getInterface());
+
+        function display1(table1) {
+            document.getElementById('list-book1').innerHTML = table1;
+            saveData();
         }
-        console.log(store1.dataArr);
+
     </script>
 </body>
 <!-- <script src="js/main.js"></script> -->
+
 </html>

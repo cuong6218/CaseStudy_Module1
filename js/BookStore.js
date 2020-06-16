@@ -27,7 +27,7 @@ class BookStore {
                         <th>Hình ảnh</th>
                     </tr>`;
         for (let i = 0; i < this.books.length; i++) {
-            table += `<tr>${this.books[i].getHtml()}+${this.getButtons(i)}</tr>`;
+            table += `<tr>${this.books[i].getHtml()}${this.getButtons(i)}</tr>`;
         }
         table += '</table>';
         return table;

@@ -11,6 +11,7 @@ function display(table) {
     document.getElementById('list-book').innerHTML = table;
     saveData();
 }
+
 function addBook() {
     let name = document.getElementById('add-name').value;
     let kind = document.getElementById('add-kind').value;
@@ -43,6 +44,7 @@ let publish = document.getElementById('edit-publish');
 let price = document.getElementById('edit-price');
 let desc = document.getElementById('edit-desc');
 let img = document.getElementById('edit-img');
+
 function editBook(index) {
     document.getElementById('edit-form').style.display = 'inline-block';
     let book1 = store1.getBookbyIndex(index);
@@ -60,8 +62,8 @@ function saveBook() {
     if (name.value == "" || kind.value == "" || author.value == "" || publish.value == "" || price.value == "" || desc.value == "" || img.value == "") {
         alert('Mời bạn nhập đầy đủ thông tin');
     } else {
-    store1.books[currentBook].edit(name.value, kind.value, author.value, publish.value, price.value, desc.value, img.value);
-    display(store1.getHtml());
+        store1.books[currentBook].edit(name.value, kind.value, author.value, publish.value, price.value, desc.value, img.value);
+        display(store1.getHtml());
     }
     document.getElementById('edit-form').reset();
     document.getElementById('edit-form').style.display = "none";
@@ -74,3 +76,4 @@ function saveData() {
 function loadData() {
     return localStorage.hasOwnProperty(BOOK) ? JSON.parse(localStorage.getItem(BOOK)) : [];
 }
+

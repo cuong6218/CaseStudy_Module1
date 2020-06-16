@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rodneys Store</title>
 </head>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="css/style.css"/>
 <script src="js/Book.js"></script>
 <script src="js/BookStore.js"></script>
 <!-- <script src="js/data.js"></script> -->
@@ -21,7 +21,7 @@
             <input id="add-price" placeholder="Nhập giá tiền" />
             <input id="add-desc" placeholder="Nhập mô tả" />
             <input id="add-img" placeholder="Kèm đường dẫn hình ảnh" />
-            <button type="button" onclick="addBook()">Thêm thông tin</button>
+            <button type="button" class="add-button" onclick="addBook()">Thêm thông tin</button>
         </fieldset>
     </form>
     <form id="edit-form">
@@ -33,7 +33,7 @@
         <input id="edit-price" placeholder="Nhập giá tiền"/>
         <input id="edit-desc" placeholder="Nhập mô tả"/>
         <input id="edit-img" placeholder="Kèm đường dẫn hình ảnh"/>
-        <button type="button" onclick="saveBook()">Lưu thông tin</button>
+        <button type="button" class="save-button" onclick="saveBook()">Lưu thông tin</button>
         </fieldset>
     </form>
     <h1>Danh sách thông tin sách</h1>
