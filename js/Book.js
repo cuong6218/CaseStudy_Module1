@@ -71,10 +71,15 @@ class Book {
                     </tr>`;
         return table;
     }
-    displayEach() {
-        let block = `<img src="${this._img}">
-                    <p1>${this._name}</p1>
-                    <p2>${this._price}</p2>`;
+    getInterface1() {
+        let block = `
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="${this.img}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">${this.name}</h5>
+                            <p class="card-text">${this.price} Đ</p>
+                        </div>
+                    </div>`;
         return block;
     }
 }

@@ -46,11 +46,11 @@ class BookStore {
         book.edit(name, kind, author, publish, price, desc, img);
     }
 
-    getHtmlFrontEnd() {
-        let blocks = "";
-        for (let i = 0; i < this.books.length; i++) {
-            blocks += `${this.books[i].displayEach()}`;
+    getInterface(){
+        let table = ``;
+        for (let i = 0; i < this.data.length; i++) {
+            table += "<div class='col-md-3 text-center'>"+this.data[i].getInterface1() + '</div>';
         }
-        return blocks;
+        return table;
     }
 }
