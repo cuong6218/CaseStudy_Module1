@@ -15,7 +15,9 @@ class BookStore {
         this.books.push(book);
     }
     getHtml() {
-        let table = `<table id="list-books" cellspacing='0'><tr>
+        console.log(this.books)
+        let table = `<table id="list-books" cellspacing='0'>
+                    <tr>
                         <th>Tên sách</th>
                         <th>Thể loại</th>
                         <th>Tác giả</th>
@@ -25,7 +27,7 @@ class BookStore {
                         <th>Hình ảnh</th>
                     </tr>`;
         for (let i = 0; i < this.books.length; i++) {
-            table += `<tr> ${this.books[i].getHtml()}${this.getButtons(i)}</tr>`;
+            table += `<tr>${this.books[i].getHtml()}+${this.getButtons(i)}</tr>`;
         }
         table += '</table>';
         return table;
@@ -46,10 +48,10 @@ class BookStore {
         book.edit(name, kind, author, publish, price, desc, img);
     }
 
-    getInterface(){
+    getInterface() {
         let table = ``;
         for (let i = 0; i < this.data.length; i++) {
-            table += "<div class='col-md-3 text-center'>"+this.data[i].getInterface1() + '</div>';
+            table += "<div class='col-md-3 text-center'>" + this.data[i].getInterface1() + '</div>';
         }
         return table;
     }

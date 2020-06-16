@@ -60,15 +60,13 @@ class Book {
         this._img = img;
     }
     getHtml() {
-        let table = `<tr>
-                        <td>${this._name}</td>
-                        <td>${this._kind}</td>
-                        <td>${this._author}</td>
-                        <td>${this._publish}</td>
-                        <td>${this._price}</td>
-                        <td>${this._desc}</td>
-                        <td><img src="${this._img}"></td>
-                    </tr>`;
+        let table = `<td>${this._name}</td>
+                    <td>${this._kind}</td>
+                    <td>${this._author}</td>
+                    <td>${this._publish}</td>
+                    <td>${this._price}</td>
+                    <td>${this._desc}</td>
+                    <td><img src="${this._img}"></td>`;
         return table;
     }
     getInterface1() {
